@@ -1,0 +1,5 @@
+.cardContainer {
+	display: flex;
+	padding: 1vw;
+	flex-flow: row wrap;
+}
