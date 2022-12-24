@@ -1,0 +1,10 @@
+.cardTitle {
+	color: var(--background-color);
+	margin: 1vw 0 0 1vw;
+}
+
+.bigCard {
+	width: 90vw;
+	min-height: 300px;
+	height: fit-content;
+}

@@ -50,7 +50,12 @@ const errorList = [
          { title: '401', description: 'Unauthorized' },
          { title: '402', description: 'Payment Required' },
          { title: '403', description: 'Forbidden' },
-         { title: '404', description: 'Not Found' },
+         {
+            title: '404',
+            description: 'Not Found',
+            detailedDescription:
+               'The server cannot find the requested resource. In the browser, this means the URL is not recognized. In an API, this can also mean that the endpoint is valid but the resource itself does not exist. Servers may also send this response instead of 403 Forbidden to hide the existence of a resource from an unauthorized client. This response code is probably the most well known due to its frequent occurrence on the web',
+         },
          { title: '405', description: 'Method Not Allowed' },
          { title: '406', description: 'Not Acceptable' },
          { title: '407', description: 'Proxy Authentication Required' },
@@ -111,7 +116,6 @@ export default function Home() {
             <link rel="icon" href="/favicon.ico" />
          </Head>
          <main>
-            <h1>Hello World!</h1>
             {errorList.map((currError) => (
                <CardContainer
                   key={currError.responseClass}
@@ -119,7 +123,6 @@ export default function Home() {
                   cardList={currError.cardList}
                />
             ))}
-            <Card title="404" description="File not found" />
          </main>
       </>
    );

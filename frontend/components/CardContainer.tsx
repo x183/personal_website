@@ -1,9 +1,9 @@
-import { CardProps } from './Card';
+import CardData from '../interfaces/CardData';
 import Card from './Card';
 import styles from './CardContainer.module.css';
 export interface CardContainerProps {
    responseClass: string;
-   cardList: CardProps[];
+   cardList: CardData[];
 }
 
 const CardContainer = ({ responseClass, cardList }: CardContainerProps) => {
@@ -12,11 +12,7 @@ const CardContainer = ({ responseClass, cardList }: CardContainerProps) => {
          <h1>{responseClass}</h1>
          <div className={styles.cardContainer}>
             {cardList.map((currCard) => (
-               <Card
-                  key={currCard.title}
-                  title={currCard.title}
-                  description={currCard.description}
-               />
+               <Card key={currCard.title} cardProp={currCard} />
             ))}
          </div>
       </>

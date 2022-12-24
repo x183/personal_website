@@ -46,6 +46,9 @@
   margin: 0;
 }
 
+h1 {
+  color: var(--text-color);
+}
 html,
 body {
   max-width: 100vw;
@@ -53,13 +56,9 @@ body {
   background-color: var(--site-background-color);
 }
 
-body {
-  color: rbg(--foreground-rgb);
-  background: linear-gradient(to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+p {
+  margin: 0 1vw 0 1vw;
 }
-
 a {
   color: inherit;
   text-decoration: none;
@@ -97,9 +96,6 @@ a {
   animation-duration: 0.3s;
 }
 
-.cardClass:active {
-  width: 300px;
-}
 
 @keyframes in {
   0% {
