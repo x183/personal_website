@@ -1,0 +1,10 @@
+.searchBar {
+	height: 40px;
+	width: 60%;
+	margin: 30px 20%;
+	background-color: var(--text-color);
+	border-radius: 20px;
+	font-size: large;
+	text-align: center;
+	font-weight: 700;
+}

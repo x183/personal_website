@@ -3,6 +3,7 @@ import CardData from '../interfaces/CardData';
 import styles from './Card.module.css';
 export interface CardProps {
    cardProp: CardData;
+   filter: string;
 }
 
 const delayText = async (text: string | undefined, setText: any) => {
@@ -12,9 +13,19 @@ const delayText = async (text: string | undefined, setText: any) => {
    }, 350);
 };
 
-const Card = ({ cardProp }: CardProps) => {
+const checkFilter = (filter: string, cardInfo: CardData) => {
+   if (filter === '') return true;
+   return (
+      cardInfo.title.toLowerCase().includes(filter) ||
+      cardInfo.description.toLowerCase().includes(filter) ||
+      cardInfo.detailedDescription?.toLowerCase().includes(filter)
+   );
+};
+
+const Card = ({ cardProp, filter }: CardProps) => {
    const [big, setBig] = useState(false);
    const [text, setText] = useState('');
+   if (!checkFilter(filter, cardProp)) return null;
    return (
       <div
          className={`cardClass ${big ? styles.bigCard : null}`}

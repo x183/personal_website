@@ -1,0 +1,90 @@
+[
+   {
+      "responseClass": "100 - Informational",
+      "cardList": [
+         { "title": "100", "description": "Continue", "detailedDescription":"This interim response indicates that the client should continue the request or ignore the response if the request is already finished." },
+         { "title": "101", "description": "Switching Protocols", "detailedDescription":"This code is sent in response to an Upgrade request header from the client, and indicates the protocol the server is switching to."  },
+         { "title": "102", "description": "Processing", "detailedDescription":"This code indicates that the server has received and is processing the request, but no response is available yet." },
+         { "title": "103", "description": "Early Hints", "detailedDescription":"This status code is primarily intended to be used with the Link header, letting the user agent start preloading resources while the server prepares a response." }
+      ]
+   },
+   {
+      "responseClass": "200 - Success",
+      "cardList": [
+         { "title": "200", "description": "OK", "detailedDescription": "The request succeeded. The result meaning of \"success\" depends on the HTTP method:\n\t*\tGET: The resource has been fetched and transmitted in the message body.\n\t*\tHEAD: The representation headers are included in the response without any message body.\n\t*\tPUT or POST: The resource describing the result of the action is transmitted in the message body.\n\t*\tTRACE: The message body contains the request message as received by the server." },
+         { "title": "201", "description": "Created", "detailedDescription": "The request succeeded, and a new resource was created as a result. This is typically the response sent after POST requests, or some PUT requests." },
+         { "title": "202", "description": "Accepted", "detailedDescription": "The request has been received but not yet acted upon. It is noncommittal, meaning that there is no way in HTTP to later send an asynchronous response indicating the outcome of processing the request. It is intended for cases where another process or server handles the request, or for batch processing." },
+			{ "title": "203", "description": "Non-Authoritative Information", "detailedDescription": "The request was successful but the enclosed payload has been modified from that of the origin server's 200 OK response by a transforming proxy." },
+			{ "title": "204", "description": "No Content", "detailedDescription": "The server successfully processed the request and is not returning any content." },
+			{ "title": "205", "description": "Reset Content", "detailedDescription": "The server successfully processed the request, but is not returning any content. Unlike a 204 response, this response requires that the requester reset the document view." },
+			{ "title": "206", "description": "Partial Content", "detailedDescription": "The server is delivering only part of the resource due to a range header sent by the client. The range header is used by HTTP clients to enable resuming of interrupted downloads, or split a download into multiple simultaneous streams." },
+			{ "title": "207", "description": "Multi-Status", "detailedDescription": "The message body that follows is by default an XML message and can contain a number of separate response codes, depending on how many sub-requests were made." },
+			{ "title": "208", "description": "Already Reported", "detailedDescription": "The members of a DAV binding have already been enumerated in a preceding part of the (multistatus) response, and are not being included again." },
+			{ "title": "226", "description": "IM Used", "detailedDescription": "The server has fulfilled a request for the resource, and the response is a representation of the result of one or more instance-manipulations applied to the current instance." }
+      ]
+   },
+   {
+      "responseClass": "300 - Redirection",
+      "cardList": [
+         { "title": "300", "description": "Multiple Choices", "detailedDescription": "The request has more than one possible response. The user agent or user should choose one of them. (There is no standardized way of choosing one of the responses, but HTML links to the possibilities are recommended so the user can pick.)" },
+         { "title": "301", "description": "Moved Permanently", "detailedDescription": "The URL of the requested resource has been changed permanently. The new URL is given in the response." },
+         { "title": "302", "description": "Found", "detailedDescription": "This response code means that the URI of requested resource has been changed temporarily. Further changes in the URI might be made in the future. So, this same URI should be used by the client in future requests." },
+         { "title": "303", "description": "See Other", "detailedDescription": "The server sent this response to direct the client to get the requested resource at another URI with a GET request." },
+         { "title": "304", "description": "Not Modified", "detailedDescription": "This is used for caching purposes. It tells the client that the response has not been modified, so the client can continue to use the same cached version of the response." },
+         { "title": "305", "description": "Use Proxy", "detailedDescription": "Defined in a previous version of the HTTP specification to indicate that a requested response must be accessed by a proxy. It has been deprecated due to security concerns regarding in-band configuration of a proxy." },
+         { "title": "306", "description": "Switch Proxy", "detailedDescription": "This response code is no longer used; it is just reserved. It was used in a previous version of the HTTP/1.1 specification." },
+			{ "title": "307", "description": "Temporary Redirect", "detailedDescription": "The request should be repeated with another URI; however, future requests should still use the original URI. In contrast to how 302 was historically implemented, the request method is not allowed to be changed when reissuing the original request. For example, a POST request should be repeated using another POST request." },
+			{ "title": "308", "description": "Permanent Redirect", "detailedDescription": "This means that the resource is now permanently located at another URI, specified by the Location: HTTP Response header. This has the same semantics as the 301 Moved Permanently HTTP response code, with the exception that the user agent must not change the HTTP method used: If a POST was used in the first request, a POST must be used in the second request." }
+      ]
+   },
+   {
+      "responseClass": "400 - Client Error",
+      "cardList": [
+         { "title": "400", "description": "Bad Request", "detailedDescription": "The server cannot or will not process the request due to an apparent client error (e.g., malformed request syntax, size too large, invalid request message framing, or deceptive request routing)." },
+         { "title": "401", "description": "Unauthorized", "detailedDescription":"Although the HTTP standard specifies \"unauthorized\", semantically this response means \"unauthenticated\". That is, the client must authenticate itself to get the requested response." },
+         { "title": "402", "description": "Payment Required", "detailedDescription": "This response code is reserved for future use. The initial aim for creating this code was using it for digital payment systems, however this status code is used very rarely and no standard convention exists." },
+         { "title": "403", "description": "Forbidden", "detailedDescription": "The client does not have access rights to the content; that is, it is unauthorized, so the server is refusing to give the requested resource. Unlike 401, the client's identity is known to the server." },
+			{ "title": "404", "description": "Not Found", "detailedDescription": "The server can not find the requested resource. In the browser, this means the URL is not recognized. In an API, this can also mean that the endpoint is valid but the resource itself does not exist. Servers may also send this response instead of 403 Forbidden to hide the existence of a resource from an unauthorized client. This response code is probably the most well known due to its frequent occurrence on the web" },
+			{ "title": "405", "description": "Method Not Allowed", "detailedDescription": "The request method is known by the server but has been disabled and cannot be used. For example, an API may forbid DELETE-ing a resource. The two mandatory methods, GET and HEAD, must never be disabled and should not return this error code." },
+			{ "title": "406", "description": "Not Acceptable", "detailedDescription": "This response is sent when the web server, after performing server-driven content negotiation, doesn't find any content that conforms to the criteria given by the user agent." },
+			{ "title": "407", "description": "Proxy Authentication Required", "detailedDescription": "This is similar to 401 but authentication is needed to be done by a proxy." },
+			{ "title": "408", "description": "Request Timeout", "detailedDescription": "This response is sent on an idle connection by some servers, even without any previous request by the client. It means that the server would like to shut down this unused connection. This response is used much more since some browsers, like Chrome, Firefox 27+, or IE9, use HTTP pre-connection mechanisms to speed up surfing." },
+			{ "title": "409", "description": "Conflict", "detailedDescription": "This response is sent when a request conflicts with the current state of the server." },
+			{ "title": "410", "description": "Gone", "detailedDescription": "This response is sent when the requested content has been permanently deleted from server, with no forwarding address.  Clients are expected to remove their caches and links to the resource. The HTTP specification intends this status code to be used for \"limited-time, promotional services\". APIs should not feel compelled to indicate resources that have been deleted with this status code. " },
+         { "title": "411", "description": "Length Required", "detailedDescription": "Server rejected the request because the Content-Length header field is not defined and the server requires it." },
+         { "title": "412", "description": "Precondition Failed", "detailedDescription": "The client has indicated preconditions in its headers which the server does not meet." },
+			{ "title": "413", "description": "Payload Too Large", "detailedDescription": "Request entity is larger than limits defined by server; the server might close the connection or return an Retry-After header field." },
+			{ "title": "414", "description": "URI Too Long", "detailedDescription": "The URI requested by the client is longer than the server is willing to interpret." },
+			{ "title": "415", "description": "Unsupported Media Type", "detailedDescription": "The media format of the requested data is not supported by the server, so the server is rejecting the request." },
+			{ "title": "416", "description": "Range Not Satisfiable", "detailedDescription": "The range specified by the Range header field in the request can't be fulfilled; it's possible that the range is outside the size of the target URI's data." },
+			{ "title": "417", "description": "Expectation Failed", "detailedDescription": "This response code means the expectation indicated by the Expect request header field can't be met by the server." },
+			{ "title": "418", "description": "I'm a teapot", "detailedDescription": "The server refuses the attempt to brew coffee with a teapot. 😠" },
+			{ "title": "421", "description": "Misdirected Request", "detailedDescription": "The request was directed at a server that is not able to produce a response (for example because of connection reuse)." },
+			{ "title": "422", "description": "Unprocessable Entity", "detailedDescription": "The request was well-formed but was unable to be followed due to semantic errors." },
+			{ "title": "423", "description": "Locked", "detailedDescription": "The resource that is being accessed is locked." },
+			{ "title": "424", "description": "Failed Dependency", "detailedDescription": "The request failed due to failure of a previous request." },
+			{ "title": "425", "description": "Too Early", "detailedDescription": "Indicates that the server is unwilling to risk processing a request that might be replayed." },
+			{ "title": "426", "description": "Upgrade Required", "detailedDescription": "The client should switch to a different protocol such as TLS/1.0, given in the Upgrade header field." },
+			{ "title": "428", "description": "Precondition Required", "detailedDescription": "The origin server requires the request to be conditional. Intended to prevent \"the 'lost update' problem, where a client GETs a resource's state, modifies it, and PUTs it back to the server, when meanwhile a third party has modified the state on the server, leading to a conflict.\" " },
+         { "title": "429", "description": "Too Many Requests", "detailedDescription": "The user has sent too many requests in a given amount of time. Intended for use with rate-limiting schemes." },
+			{ "title": "431", "description": "Request Header Fields Too Large", "detailedDescription": "The server is unwilling to process the request because either an individual header field, or all the header fields collectively, are too large." },
+			{ "title": "451", "description": "Unavailable For Legal Reasons", "detailedDescription": "A server operator has received a legal demand to deny access to a resource or to a set of resources that includes the requested resource. The code 451 was chosen as a reference to the novel Fahrenheit 451." }
+      ]
+   },
+   {
+      "responseClass": "500 - Server Error",
+      "cardList": [
+         { "title": "500", "description": "Internal Server Error", "detailedDescription": "The server has encountered a situation it doesn't know how to handle." },
+			{ "title": "501", "description": "Not Implemented", "detailedDescription": "The request method is not supported by the server and cannot be handled. The only methods that servers are required to support (and therefore that must not return this code) are GET and HEAD." },
+			{ "title": "502", "description": "Bad Gateway", "detailedDescription": "This error response means that the server, while working as a gateway to get a response needed to handle the request, got an invalid response." },
+			{ "title": "503", "description": "Service Unavailable", "detailedDescription": "The server is not ready to handle the request. Common causes are a server that is down for maintenance or that is overloaded. Note that together with this response, a user-friendly page explaining the problem should be sent. This responses should be used for temporary conditions and the Retry-After: HTTP header should, if possible, contain the estimated time before the recovery of the service. The webmaster must also take care about the caching-related headers that are sent along with this response, as these temporary condition responses should usually not be cached." },
+			{ "title": "504", "description": "Gateway Timeout", "detailedDescription": "This error response is given when the server is acting as a gateway and cannot get a response in time." },
+			{ "title": "505", "description": "HTTP Version Not Supported", "detailedDescription": "The HTTP version used in the request is not supported by the server." },
+			{ "title": "506", "description": "Variant Also Negotiates", "detailedDescription": "The server has an internal configuration error: transparent content negotiation for the request results in a circular reference." },
+			{ "title": "507", "description": "Insufficient Storage", "detailedDescription": "The method could not be performed on the resource because the server is unable to store the representation needed to successfully complete the request." },
+			{ "title": "508", "description": "Loop Detected", "detailedDescription": "The server terminated an operation because it encountered an infinite loop while processing a request with \"Depth: infinity\". This status indicates that the entire operation failed." },
+			{ "title": "510", "description": "Not Extended", "detailedDescription": "Further extensions to the request are required for the server to fulfill it." },
+			{ "title": "511", "description": "Network Authentication Required", "detailedDescription": "The client needs to authenticate to gain network access. Intended for use by intercepting proxies used to control access to the network (e.g., \"captive portals\" used to require agreement to Terms of Service before granting full Internet access via a Wi-Fi hotspot)." }
+      ]
+   }
+]
