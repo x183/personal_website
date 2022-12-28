@@ -1,0 +1,4 @@
+.notesCategory {
+	display: flex;
+	flex-wrap: wrap;
+}

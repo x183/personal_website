@@ -46,7 +46,8 @@
   margin: 0;
 }
 
-h1 {
+h1,
+h2 {
   color: var(--text-color);
 }
 html,

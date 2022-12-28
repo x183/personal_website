@@ -1,0 +1,14 @@
+.fancyButton {
+	background-color: var(--highlight2-color);
+	border: none;
+	height: 3rem;
+	text-overflow: wrap;
+	width: 10rem;
+	margin: 0.5rem 1rem;
+	color: var(--background-color);
+	border-radius: 15px;
+}
+
+.fancyButton:hover {
+	border: 2px solid var(--highlight1-color);
+}

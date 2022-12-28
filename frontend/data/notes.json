@@ -1,0 +1,36 @@
+[
+	{
+		"categoryName": "Matte",
+		"courses":[
+			{
+				"name": "Diskret matematik",
+				"pdf": "diskmatte.pdf"
+			},
+			{
+				"name": "Linjär algebra",
+				"pdf": "linjalg.pdf"
+			},
+			{
+				"name": "Matematisk anays",
+				"pdf": "matanalys.pdf"
+			}
+		]
+	},
+	{
+		"categoryName": "Programmering",
+		"courses":[
+			{
+				"name": "Maskinorienterad programmering",
+				"pdf": "mop.pdf"
+			},
+			{
+				"name": "Objektorienterad programmering",
+				"pdf": "oop.pdf"
+			},
+			{
+				"name": "Design och konstruktion av grafiska gränssnitt",
+				"pdf": "gui.pdf"
+			}
+		]
+	}
+]
