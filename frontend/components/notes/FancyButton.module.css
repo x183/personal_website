@@ -3,10 +3,14 @@
 	border: none;
 	height: 3rem;
 	text-overflow: wrap;
+	text-align: center;
 	width: 10rem;
 	margin: 0.5rem 1rem;
 	color: var(--background-color);
 	border-radius: 15px;
+	display: flex;
+		justify-content: center;
+		align-items: center;
 }
 
 .fancyButton:hover {

@@ -1,8 +1,10 @@
 import Head from 'next/head';
 import { Inter } from '@next/font/google';
-import Card from '../components/Card';
-import CardContainer, { CardContainerProps } from '../components/CardContainer';
-import SearchBar from '../components/SearchBar';
+import Card from '../components/errors/Card';
+import CardContainer, {
+   CardContainerProps,
+} from '../components/errors/CardContainer';
+import SearchBar from '../components/errors/SearchBar';
 import { useState } from 'react';
 import errorList from '../data/errors.json';
 

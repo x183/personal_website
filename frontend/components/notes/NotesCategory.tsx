@@ -13,7 +13,11 @@ const NotesCategory = ({ categoryName, notes }: NotesCategoryProps) => {
          <h2>{categoryName}</h2>
          <div className={styles.notesCategory}>
             {notes.map((note) => (
-               <FancyButton key={note.name} note={note} />
+               <FancyButton
+                  key={note.name}
+                  note={note}
+                  folderName={categoryName.toLowerCase()}
+               />
             ))}
          </div>
       </>

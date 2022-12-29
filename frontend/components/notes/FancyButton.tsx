@@ -1,21 +1,21 @@
+import Link from 'next/link';
 import { NextResponse } from 'next/server';
 import NotesData from '../../interfaces/NotesData';
 import styles from './FancyButton.module.css';
 
 export interface FancyButtonProps {
    note: NotesData;
+   folderName: string;
 }
 
-const FancyButton = ({ note }: FancyButtonProps) => {
+const FancyButton = ({ note, folderName }: FancyButtonProps) => {
    return (
-      <button
+      <Link
+         href={`/notes/${folderName}/${note.pdf}`}
          className={styles.fancyButton}
-         onClick={() => {
-            return NextResponse.redirect(note.pdf);
-         }}
       >
          {note.name}
-      </button>
+      </Link>
    );
 };
 export default FancyButton;

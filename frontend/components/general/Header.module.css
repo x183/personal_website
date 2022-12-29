@@ -1,0 +1,11 @@
+.headerBox {
+	background-color: var(--background-color);
+	height: 5vh;
+	min-height: 50px;
+	font-size: large;
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+	padding: 10px;
+	color: var(--text-color);
+}
