@@ -1,0 +1,9 @@
+version: "3"
+services:
+  frontend:
+    image: saxit_frontend
+    build:
+      context: frontend
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
