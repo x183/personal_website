@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { NextResponse } from 'next/server';
 import NotesData from '../../interfaces/NotesData';
 import styles from './FancyButton.module.css';
@@ -14,7 +15,14 @@ const FancyButton = ({ note, folderName }: FancyButtonProps) => {
          href={`/notes/${folderName}/${note.pdf}`}
          className={styles.fancyButton}
       >
-         {note.name}
+         <p>{note.name}</p>
+         <br />
+         <Image
+            src={`/images/${note.image}`}
+            width={100}
+            height={100}
+            alt={'missing image'}
+         />
       </Link>
    );
 };

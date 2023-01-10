@@ -4,15 +4,18 @@
 		"courses":[
 			{
 				"name": "Diskret matematik",
-				"pdf": "diskmatte.pdf"
+				"pdf": "diskmatte.pdf",
+				"image": "diskmatte.jpg"
 			},
 			{
 				"name": "Linjär algebra",
-				"pdf": "linjalg.pdf"
+				"pdf": "linjalg.pdf",
+				"image": "linjar-algebra.png"
 			},
 			{
 				"name": "Matematisk anays",
-				"pdf": "matanalys.pdf"
+				"pdf": "matanalys.pdf",
+				"image":"envarre.gif"
 			}
 		]
 	},
@@ -21,15 +24,18 @@
 		"courses":[
 			{
 				"name": "Maskinorienterad programmering",
-				"pdf": "mop.pdf"
+				"pdf": "mop.pdf",
+				"image":"mop.jpg"
 			},
 			{
 				"name": "Objektorienterad programmering",
-				"pdf": "oop.pdf"
+				"pdf": "oop.pdf",
+				"image":"oop.jpg"
 			},
 			{
 				"name": "Design av grafiska gränssnitt",
-				"pdf": "gui.pdf"
+				"pdf": "gui.pdf",
+				"image":"gui.png"
 			}
 		]
 	}
