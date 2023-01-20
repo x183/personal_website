@@ -36,6 +36,16 @@
 				"name": "Design av grafiska gränssnitt",
 				"pdf": "gui.pdf",
 				"image":"gui.png"
+			},
+			{
+				"name": "Concurrent Programming",
+				"pdf": "paraprog.pdf",
+				"image":"gui.png"
+			},
+			{
+				"name": "Software Quality and Testing",
+				"pdf": "testing.pdf",
+				"image":"gui.png"
 			}
 		]
 	}
