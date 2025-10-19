@@ -28,7 +28,7 @@ jobs:
          - name: Install pnpm
            run: npm i -g pnpm
          - name: Install dependencies
-           run: pnpm ci
+           run: pnpm i
            working-directory: frontend
          - name: Build
            run: pnpm run build --if-present
@@ -53,6 +53,6 @@ jobs:
               cache-dependency-path: backend/pnpm-lock.yaml
          - run: cd backend
          - run: npm i -g pnpm
-         - run: pnpm ci
+         - run: pnpm i
          - run: pnpm run build --if-present
          - run: pnpm eslint .
