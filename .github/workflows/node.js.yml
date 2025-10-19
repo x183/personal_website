@@ -4,47 +4,47 @@
 name: Node.js CI
 
 on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+   push:
+      branches: ["main"]
+   pull_request:
+      branches: ["main"]
 
 jobs:
-  build-frontend:
+   build-frontend:
+      runs-on: ubuntu-latest
+      strategy:
+         matrix:
+            node-version: [18.x, 20.x, 22.x]
+            # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [18.x, 20.x, 22.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+      steps:
+         - uses: actions/checkout@v4
+         - name: Use Node.js ${{ matrix.node-version }}
+           uses: actions/setup-node@v4
+           with:
+              node-version: ${{ matrix.node-version }}
+              cache: "npm"
+         - run: cd frontend
+         - run: npm i -g pnpm
+         - run: pnpm ci
+         - run: pnpm run build --if-present
+         - run: pnpm lint
+   build-backend:
+      runs-on: ubuntu-latest
+      strategy:
+         matrix:
+            node-version: [18.x, 20.x, 22.x]
+            # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
-    steps:
-    - uses: actions/checkout@v4
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v4
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'pnpm'
-    - run: cd frontend
-    - run: pnpm ci
-    - run: pnpm run build --if-present
-    - run: pnpm lint
-  build-backend:
-    
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [18.x, 20.x, 22.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
-    steps:
-    - uses: actions/checkout@v4
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v4
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'pnpm'
-    - run: cd backend
-    - run: pnpm ci
-    - run: pnpm run build --if-present
-    - run: pnpm eslint .
+      steps:
+         - uses: actions/checkout@v4
+         - name: Use Node.js ${{ matrix.node-version }}
+           uses: actions/setup-node@v4
+           with:
+              node-version: ${{ matrix.node-version }}
+              cache: "npm"
+         - run: cd backend
+         - run: npm i -g pnpm
+         - run: pnpm ci
+         - run: pnpm run build --if-present
+         - run: pnpm eslint .
