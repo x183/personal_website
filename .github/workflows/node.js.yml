@@ -23,8 +23,6 @@ jobs:
            uses: actions/setup-node@v4
            with:
               node-version: ${{ matrix.node-version }}
-              cache: "pnpm"
-              cache-dependency-path: frontend/pnpm-lock.yaml
          - run: npm i -g pnpm
          - run: pnpm i
            working-directory: frontend
@@ -45,8 +43,6 @@ jobs:
            uses: actions/setup-node@v4
            with:
               node-version: ${{ matrix.node-version }}
-              cache: "pnpm"
-              cache-dependency-path: backend/pnpm-lock.yaml
          - run: cd backend
          - run: npm i -g pnpm
          - run: pnpm i
