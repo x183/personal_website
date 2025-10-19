@@ -18,24 +18,24 @@ jobs:
             # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
       steps:
-             - uses: actions/checkout@v4
-             - name: Use Node.js ${{ matrix.node-version }}
-               uses: actions/setup-node@v4
-               with:
-                 node-version: ${{ matrix.node-version }}
-                 cache: "pnpm"
-                 cache-dependency-path: frontend/pnpm-lock.yaml
-             - name: Install pnpm
-               run: npm i -g pnpm
-             - name: Install dependencies
-               run: pnpm ci
-               working-directory: frontend
-             - name: Build
-               run: pnpm run build --if-present
-               working-directory: frontend
-             - name: Lint
-               run: pnpm lint
-               working-directory: frontend
+         - uses: actions/checkout@v4
+         - name: Use Node.js ${{ matrix.node-version }}
+           uses: actions/setup-node@v4
+           with:
+              node-version: ${{ matrix.node-version }}
+              cache: "npm"
+              cache-dependency-path: frontend/pnpm-lock.yaml
+         - name: Install pnpm
+           run: npm i -g pnpm
+         - name: Install dependencies
+           run: pnpm ci
+           working-directory: frontend
+         - name: Build
+           run: pnpm run build --if-present
+           working-directory: frontend
+         - name: Lint
+           run: pnpm lint
+           working-directory: frontend
    build-backend:
       runs-on: ubuntu-latest
       strategy:
@@ -50,7 +50,7 @@ jobs:
            with:
               node-version: ${{ matrix.node-version }}
               cache: "npm"
-              cache-dependency-path: frontend/pnpm-lock.yaml
+              cache-dependency-path: backend/pnpm-lock.yaml
          - run: cd backend
          - run: npm i -g pnpm
          - run: pnpm ci
