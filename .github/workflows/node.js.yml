@@ -23,18 +23,15 @@ jobs:
            uses: actions/setup-node@v4
            with:
               node-version: ${{ matrix.node-version }}
-              cache: "npm"
+              cache: "pnpm"
               cache-dependency-path: frontend/pnpm-lock.yaml
-         - name: Install pnpm
-           run: npm i -g pnpm
-         - name: Install dependencies
-           run: pnpm i
+         - run: npm i -g pnpm
            working-directory: frontend
-         - name: Build
-           run: pnpm run build --if-present
+         - run: pnpm i
            working-directory: frontend
-         - name: Lint
-           run: pnpm lint
+         - run: pnpm run build --if-present
+           working-directory: frontend
+         - run: pnpm lint
            working-directory: frontend
    build-backend:
       runs-on: ubuntu-latest
@@ -49,10 +46,14 @@ jobs:
            uses: actions/setup-node@v4
            with:
               node-version: ${{ matrix.node-version }}
-              cache: "npm"
+              cache: "pnpm"
               cache-dependency-path: backend/pnpm-lock.yaml
          - run: cd backend
          - run: npm i -g pnpm
+           working-directory: backend
          - run: pnpm i
+           working-directory: backend
          - run: pnpm run build --if-present
+           working-directory: backend
          - run: pnpm eslint .
+           working-directory: backend
