@@ -26,7 +26,6 @@ jobs:
               cache: "pnpm"
               cache-dependency-path: frontend/pnpm-lock.yaml
          - run: npm i -g pnpm
-           working-directory: frontend
          - run: pnpm i
            working-directory: frontend
          - run: pnpm run build --if-present
@@ -50,7 +49,6 @@ jobs:
               cache-dependency-path: backend/pnpm-lock.yaml
          - run: cd backend
          - run: npm i -g pnpm
-           working-directory: backend
          - run: pnpm i
            working-directory: backend
          - run: pnpm run build --if-present
