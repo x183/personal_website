@@ -1,0 +1,12 @@
+[
+	{
+		"name": "findIT",
+		"description": "A project that lists services, similar to this page.",
+		"link": "https://github.com/cthit/findit"
+	},
+	{
+		"name": "errors",
+		"description": "A list of all different http response codes",
+		"link":"/projects/errors"
+	}
+]

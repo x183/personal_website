@@ -1,12 +1,11 @@
 import Head from 'next/head';
 import { Inter } from '@next/font/google';
-import Card from '../components/errors/Card';
+import Card from '../../components/errors/Card';
 import CardContainer, {
-	CardContainerProps,
-} from '../components/errors/CardContainer';
-import SearchBar from '../components/errors/SearchBar';
+} from '../../components/errors/CardContainer';
+import SearchBar from '../../components/errors/SearchBar';
 import { useState } from 'react';
-import { getFromApi } from './api/requests';
+import { getFromApi } from '../api/requests';
 //import errorList from '../data/errors.json';
 
 type ResCode = {
