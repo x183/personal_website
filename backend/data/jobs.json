@@ -1,0 +1,47 @@
+[
+  {
+    "role": "Intern R&D",
+    "company": "Ericsson",
+    "time": "Jun 2023 - Sep 2023",
+    "description": [
+      "Built a website using Django, collecting and displaying inventories of customers."
+    ]
+  },
+  {
+    "role": "Intern R&D",
+    "company": "Ericsson",
+    "time": "Jun 2024 - Nov 2024",
+    "description": [
+      "Updated web based tools to use Oauth2 authentication.",
+      "Helped redesign and build a website for tracking commits through a CI flow."
+    ]
+  },
+  {
+    "role": "Teaching Assistant",
+    "company": "Chalmers University of Technology",
+    "time": "Oct 2022 - Jan 2025",
+    "description": [
+      "Graded students' assignments and exams.",
+      "Held exercise and lab sessions teaching students concepts of software engineering and computer science. "
+    ]
+  },
+  {
+    "role": "Instructor",
+    "company": "Frivilliga Radioorganisationen FRO",
+    "time": "May 2025 - Feb 2026",
+    "description": [
+      "Designed and created a new web shop for the organisation.",
+      "Planned and held several courses in programming and computer security for teenagers."
+    ]
+  },
+  {
+    "role": "Military service",
+    "company": "Swedish Defence Force",
+    "time": "Aug 2020 - Jun 2021",
+    "description": [
+      "Basic military training",
+      "Took courses in computer science at KTH",
+      "Basic computer security and networking"
+    ]
+  }
+]

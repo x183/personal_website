@@ -1,0 +1,44 @@
+[
+  {
+    "title": "Software Engineering, Bsc",
+    "school": "Chalmers University of Technology",
+    "time": "Sep 2021 - Jun 2024",
+    "courses": [
+      "Functional Programming",
+      "Software quality and Testing",
+      "Agile Software Project Management",
+      "Object Oriented Programming and Design",
+      "Software Engineering Principles for Complex Systems"
+    ]
+  },
+  {
+    "title": "Software Engineering and Technology",
+    "school": "Chalmers University of Technology",
+    "time": "Sep 2024 - Jun 2026",
+    "courses": [
+      "Advanced Functional Programming",
+      "Quality Assurance and Testing",
+      "Project Management",
+      "Compiler Construction",
+      "Architectures for Scale-out Systems",
+      "Parallel Functional Programming"
+    ]
+  },
+  {
+    "title": "Free standing courses",
+    "school": "KTH",
+    "time": "Oct 2020 - Feb 2021",
+    "courses": [
+      "Computer Networking",
+      "Computer Systems",
+      "Computer Security",
+      "Ethical Hacking"
+    ]
+  },
+  {
+    "title": "Free standing courses",
+    "school": "Linnaeus University",
+    "time": "Jun 2023 - Jul 2023",
+    "courses": ["Applied IoT, introductory course"]
+  }
+]
